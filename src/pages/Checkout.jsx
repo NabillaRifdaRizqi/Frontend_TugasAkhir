@@ -1,10 +1,9 @@
 import { useContext, useState, useEffect } from "react";
-import COFFEE_IMAGE from "../assets/coffe.jpg";
+import COFFEE_IMAGE from "../assets/bg2.jpeg";
 import TambahButton from "../components/buttonaction/TambahButton";
 import HapusButton from "../components/buttonaction/HapusButton";
 import KurangButton from "../components/buttonaction/KurangButton";
 import OrderSummary from "../components/checkout/OrderSummary";
-import PaymentMethod from "../components/checkout/PaymentMethod";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
@@ -95,7 +94,7 @@ const handleConfirm = () => {
       // Menampilkan alert "Pesanan berhasil di checkout"
       Swal.fire({
         title: "Success!",
-        text: "Pesanan berhasil di checkout.",
+        text: "The order has been successfully checked out.",
         icon: "success",
         confirmButtonText: "OK",
       });
@@ -132,7 +131,7 @@ const handleConfirm = () => {
         <div className="container py-20 px-4 sm:px-0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4">
-              <h3 className="text-xl text-left text-[#321313] font-bold mb-0 p-4">
+              <h3 className="text-xl text-left text-white font-bold mb-0 p-4">
                 Checkout your item now!
               </h3>
               <div className="p-4 bg-white border border-white rounded-md mt-0">

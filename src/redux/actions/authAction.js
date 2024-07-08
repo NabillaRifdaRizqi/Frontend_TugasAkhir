@@ -19,7 +19,7 @@ export const login = (user, navigate) => async (dispatch) => {
     console.error(error);
     Swal.fire({
       title: error.response.data.message,
-      text: "username atau password salah",
+      text: "Incorrect username or password",
       icon: "error",
     });
   }
@@ -32,25 +32,25 @@ export const register = (user, navigate) => async () => {
     if (!response.status) {
       Swal.fire({
         title: "Error!",
-        text: "Username dan email sudah terdaftar",
+        text: "Username or email already registered",
         icon: "error",
-        confirmButtonText: "Ok",
+        confirmButtonText: "Oke",
       }); // Menampilkan alert jika registrasi gagal
     }
 
     Swal.fire({
       title: "Success!",
-      text: "User baru berhasil ditambahkan",
+      text: "new user added successfully",
       icon: "success",
-      confirmButtonText: "Ok",
+      confirmButtonText: "Oke",
     }); // Menampilkan alert jika registrasi berhasil
     navigate("/login"); // Setelah user berhasil registrasi, akan dipindahkan ke halaman login
   } catch (error) {
     Swal.fire({
       title: "Error!",
-      text: "Username dan email sudah terdaftar",
+      text: "Username or email already registered",
       icon: "error",
-      confirmButtonText: "Ok",
+      confirmButtonText: "Oke",
     }); // Menampilkan alert jika registrasi gagal
     console.error("login page", error);
   }
